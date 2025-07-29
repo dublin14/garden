@@ -136,7 +136,8 @@ img {
 
 /* Button */
 .button,
-.solo-button {
+.solo-button,
+.solo-file-button {
   display: inline-block;
   padding: var(--solo-px8);
   line-height: inherit;
@@ -159,6 +160,7 @@ img {
 
 .form-submit,
 [type="submit"],
+.solo-file-button,
 .solo-button.button--primary,
 .block-user-login-block form+.item-list ul li a {
   border-width: var(--solo-px1);
@@ -527,4 +529,27 @@ html.gap-16 {
     --solo-gap: var(--solo-px64);
   }
 
+}
+
+.inline-radio-checkbox form .form-wrapper.solo-clear::after,
+.inline-radio-checkbox form .form-wrapper.solo-clear::before,
+.inline-radio-checkbox form .form-wrapper .solo-clear::after,
+.inline-radio-checkbox form .form-wrapper .solo-clear::before {
+  content: none;
+  display: none;
+  clear: none;
+}
+
+.inline-radio-checkbox form .form-radios,
+.inline-radio-checkbox form .form-checkboxes {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.inline-radio-checkbox form .form-radios .form-type-radio,
+.inline-radio-checkbox form .form-checkboxes .form-type-checkbox {
+  margin: 0;
+  width: auto;
 }
